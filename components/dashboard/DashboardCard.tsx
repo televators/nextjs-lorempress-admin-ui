@@ -9,7 +9,7 @@ interface DashboardCardProps {
 
 const DashboardCard = ( { title, count, icon }: DashboardCardProps ) => {
   return (
-    <Card className="bg-slate-100 dark:bg-slate-800 p-4 pb-0">
+    <Card className="bg-slate-100 dark:bg-slate-800 flex-auto p-4 pb-0">
       <CardContent>
         <h3 className="text-3xl text-center mb-4 font-bold text-slate-500 dark:text-slate-200">{ title }</h3>
 
