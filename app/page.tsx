@@ -15,7 +15,7 @@ export default function Home() {
 
       <AnalyticsChart />
 
-      <PostTable title="Latest Posts" limit={ 5 } />
+      <PostTable title="Latest Posts" limit={ 5 } showViewAll={ true } />
     </>
   );
 }
