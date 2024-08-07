@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import '@/styles/globals.scss';
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
         <Navbar />
 
         <div className="flex">
-          <div className="hidden md:block h-[100vh]">
+          <div className="hidden md:block h-[100vh] w-[300px]">
             <Sidebar />
           </div>
 
