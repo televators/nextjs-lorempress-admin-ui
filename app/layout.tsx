@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '@/styles/globals.scss';
+import { Toaster } from '@/components/ui/toaster';
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           </div>
         </div>
 
+        <Toaster />
       </body>
     </html>
   );
