@@ -60,6 +60,7 @@ const PostEditPage = ( { params }: PostEditPageProps ) => {
       description: `Updated by ${ post?.author } on ${ post?.date }`
     } );
   };
+
   return (
     <>
       <BackButton text="Back to all posts" link="/posts" />

@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
+import DarkModeToggle from "./DarkModeToggle";
 
 const Navbar = () => {
   return (
@@ -19,28 +19,32 @@ const Navbar = () => {
         <Image src={logo} alt='Lorempress logo' width={40} priority />
       </Link>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger className="rounded-full">
-          <Avatar>
-            <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
-            <AvatarFallback className="text-black">JH</AvatarFallback>
-          </Avatar>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <Link href='/profile'>
-              Profile
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Link href='/auth'>
-              Sign out
-            </Link>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <div className="flex item-center gap-4">
+        <DropdownMenu>
+          <DropdownMenuTrigger className="rounded-full">
+            <Avatar>
+              <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+              <AvatarFallback className="text-black">JH</AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link href='/profile'>
+                Profile
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href='/auth'>
+                Sign out
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        <DarkModeToggle />
+      </div>
     </div>
   );
 }
